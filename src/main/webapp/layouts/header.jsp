@@ -5,33 +5,31 @@
 <div class="adminMenu">
 	<div class="topMenu">로그인</div>
 	<div class="topMenu">회원가입</div>
-	<div class="topMenu">1:1문의</div>
-	<div class="topMenu">사이트맵</div>
 	<div class="topMenu">관리자</div>
 </div>
 
 <div class="logo">
 	<div>
 		<a href="home"><img
-			src="${pageContext.request.contextPath}/resources/images/logo1.png"
-			alt="FindPet119" style="width:250px; height:250px" ></a>
+			src="${pageContext.request.contextPath}/resources/images/logo12.png"
+			alt="FindPet119" style="width:170px; " ></a>
 	</div>
 
 	<div>
-		<img style="top: 25px;position: relative;" src=" ${pageContext.request.contextPath}/resources/images/0119.png" alt="0119">
+		<img style="top: 10px; position: relative; width: 150px;  " src=" ${pageContext.request.contextPath}/resources/images/0119.png" alt="0119" >
 	</div>
 </div>
 
 <div class="menuBar">
 	<div></div>
 	<div>
-		<a class="totalMenu" href="**/main/totalInfo">유실물 종합안내</a>
+		<a class="totalMenu" href="**/main/totalInfo">유실유기종합안내</a>
 	</div>
 	<div>
-		<a class="totalMenu" href="**/main/findings">주인을 찾아요!(습득물)</a>
+		<a class="totalMenu" href="**/main/findings">주인을 찾아요!</a>
 	</div>
 	<div>
-		<a class="totalMenu" href="*/main/lostProperty">잃어버렸나요?(분실물)</a>
+		<a class="totalMenu" href="*/main/lostProperty">잃어버렸나요?</a>
 	</div>
 	<div>
 		<a class="totalMenu" href="*/main/infoDesk">정보마당</a>

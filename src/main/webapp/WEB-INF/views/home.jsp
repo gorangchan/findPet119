@@ -167,42 +167,42 @@ h2 {
 		<table style="width:1200px;">
 
 			<tr>
-				<td><img
+				<td><a href=""><img
 					src="${pageContext.request.contextPath}/resources/images/pet.jpg"
-					></td>
-				<td class="tapMenu"><h3>분실물 휴대폰 찾기</h3> <br>
+					></a></td>
+				<td class="tapMenu"><a href=""><h3>분실물 휴대폰 찾기</h3> <br>
 					<p>경찰청에서 보관중인 습득 휴대폰 정보와 한국정보통신진흥협회에서 운영하고 있는 휴대폰 찾기 서비스를 함께
 						제공하고 있습니다.</p> <br> <img
 					src="${pageContext.request.contextPath}/resources/images/qnb_icon1.png"
-					align="right"></td>
-				<td class="tapMenu"><h3>분실물 신고</h3> <br>
+					align="right"></a></td>
+				<td class="tapMenu"><a href=""><h3>분실물 신고</h3> <br>
 					<p>잃어버린 물건을 온라인으로 신고 할 수 있습니다. 온라인 분실신고는 회원가입 후 가능합니다. (상단 회원가입
 						이용)</p> <br> <img
 					src="${pageContext.request.contextPath}/resources/images/qnb_icon2.png"
-					align="right"></td>
-				<td class="tapMenu"><h3>1:1 문의</h3> <br>
+					align="right"></a></td>
+				<td class="tapMenu"><a href=""><h3>1:1 문의</h3> <br>
 					<p>경찰청 유실물 종합안내 서비스에 관련하여 궁금하신 사항을 1:1 문의로 남길 수 있습니다. (회원가입 필요)</p>
 					<br> <img
 					src="${pageContext.request.contextPath}/resources/images/qnb_icon3.png"
-					align="right"></td>
+					align="right"></a></td>
 			</tr>
-
+	
 
 			<tr>
-				<td class="tapMenu"><h3>유실물 포털 소개</h3> <br>
+				<td class="tapMenu"><a href=""><h3>유실물 포털 소개</h3> <br>
 					<p>유실물 취급기관 안내 및 각 기관에서 습득한 물품을 경찰청 유실물 종합안내시스템과 연계할 수 있는 유실물
 						포털 사이트에 대한 소개입니다.</p> <br> <img
 					src="${pageContext.request.contextPath}/resources/images/qnb_icon4.png"
-					align="right"></td>
+					align="right"></a></td>>
 				<td class="tapMenu" colspan="2" style="border: 5px solid #96b5dc;">55577854</td>
-				<td class="tapMenu">
+				<td class="tapMenu"><a href="">
 					<h3>도움말</h3> <br>
 					<p>
 						<span class="qnb_span">경찰청 유실물 종합안내 사이트의 도움말입니다. 회원가입부터 분실물
 							신고 및 조회, 습득물 검색 방법을 자세히 안내해드립니다. 
 					</p> <br> <img
 					src="${pageContext.request.contextPath}/resources/images/qnb_icon5.png"
-					align="right">
+					align="right"></a>
 				</td>
 			</tr>
 

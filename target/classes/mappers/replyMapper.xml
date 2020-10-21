@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.findpet119.common.board.mappers.reply">
+
+	<!-- 댓글 조회 -->
+	<select id="replyList" parameterType="int" resultType="com.my.findpet119.common.board.service.ReplyVO">
+		select
+			r_seq, seq, create_userid, content, create_datetime, update_datetime
+			from reply where seq = #{seq}
+			
+					
+	</select>
+	
+	<!-- 댓글 작성 -->
+	<insert id="replyWrite" parameterType="com.my.findpet119.common.board.service.ReplyVO">
+		insert into reply(seq, create_userid, content, create_datetime, update_datetime)
+			value(#{seq}, #{create_userid}, #{content}, #{create_datetime}, #{update_datetime})
+	</insert>
+		
+	<!-- 댓글 수정 -->
+	<update id="replyModify" parameterType="com.my.findpet119.common.board.service.ReplyVO">
+		update reply set
+			create_userid = #{create_userid},
+			content = #{content}
+		where r_seq = #{r_seq}
+			and seq = #{seq}	
+	</update>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="replyDelete" parameterType="com.my.findpet119.common.board.service.ReplyVO">
+		delete from reply
+		where r_seq = #{r_seq}
+			and seq = ${seq}	
+	</delete>
+	
+</mapper>

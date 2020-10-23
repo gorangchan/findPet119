@@ -34,6 +34,7 @@
 		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
 		<beans:property name="contentType" value="text/html; charset=UTF-8" />
 		<beans:property name="order" value="1" />
+		
 	</beans:bean>
 	<!-- Tiles 2 Configurer -->
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">

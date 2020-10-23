@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.my.findpet119.common.board.service.ReplyDAO;
@@ -13,7 +14,7 @@ import com.my.findpet119.common.board.service.ReplyVO;
 @Service
 public class ReplyServiceImpl implements ReplyService {
 
-	@Inject
+	@Autowired
 	private ReplyDAO dao;
 	
 	// 댓글 조회

@@ -7,24 +7,22 @@
 	<!-- 게시물 목록 -->
 	<select id="list" resultType="com.my.findpet119.common.board.service.BoardVO">
 		select
-			seq, title, content, b_file, hit_cnt, create_userid, createDatetime
+			seq, title, content,  hit_cnt, create_userid, create_datetime
 			from board
 	</select>
 	
 	<!-- 게시물 작성 -->
 	<insert id="write" parameterType="com.my.findpet119.common.board.service.BoardVO">
-		insert into board(seq, category, title, content, b_file, hit_cnt,
-		create_userid, create_datetime, update_userid, update_datetime,
-		delete_flag) values
-		 (board_seq.nextval,'1', #{title}, #{content}, 'N', '0', 
-		#{create_userid}, 'sysdate', #{update_userid},
-		 'sysdate', 'N')
+		insert into board(seq, category, title, content, hit_cnt,
+		create_userid, create_datetime,	delete_flag) values 
+		 (board_seq.nextval,'1', #{title}, #{content}, '0', 
+		#{create_userid}, sysdate, 'N')
 	</insert>
 	
 	<!-- 게시물 조회 -->
 	<select id="view" parameterType="int" resultType="com.my.findpet119.common.board.service.BoardVO">
 		select 
-			seq, title, content, b_file, hit_cnt, create_userid
+			seq title, content, create_userid
 		from 
 			board
 		where
@@ -43,8 +41,7 @@
 	
 	<!-- 게시물 삭제 -->
 	<delete id="delete" parameterType="int">
-		delete
-			from board
+		delete from board
 		where seq = #{seq}
 	</delete>
 	
@@ -60,10 +57,9 @@
 	<!-- 게시물 목록 + 페이징 -->
 	<select id="listPage" parameterType="hashMap" resultType="com.my.findpet119.common.board.service.BoardVO">
 		select
-			seq, title, content, b_file, hit_cnt, create_userid
+			seq, title, content, hit_cnt, create_userid
 		from board
-		where category = '1'
-		order by seq desc
+			order by seq desc
 			limit #{displayPost}, #{postNum}
 	</select>	
 	
@@ -74,8 +70,7 @@
 		select
 			seq, title, content, b_file, hit_cnt, create_userid
 		from board
-			where category = '1'
-		
+				
 		<if test='searchType.equals("title")'>
 			WHERE title LIKE concat('%', #{keyword}, '%')
 		</if>
@@ -114,7 +109,7 @@
 				or content LIKE concat('%', #{keyword}, '%')
 		</if>
 		
-		<if test='searchType.equals("create_userid")'>
+		<if test='searchType.equals("creater_userid")'>
 			WHERE create_userid LIKE concat('%', #{keyword}, '%')
 		</if>
 		

@@ -2,6 +2,7 @@ package com.my.findpet119.common.board.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.my.findpet119.common.board.service.BoardDAO;
@@ -10,7 +11,7 @@ import com.my.findpet119.common.board.service.BoardVO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
-	
+	@Autowired
 	private BoardDAO dao;
 	
 	// 게시물 목록

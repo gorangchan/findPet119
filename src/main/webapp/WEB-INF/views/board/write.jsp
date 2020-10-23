@@ -16,7 +16,7 @@
 <input type="text" name="title" /><br />
 
 <label>작성자</label>
-<input type="text" name="create_userid" /><br />
+<input type="text" name=create_userid /><br />
 
 <label>내용</label>
 <textarea cols="50" rows="5" name="content"></textarea><br />

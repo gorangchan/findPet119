@@ -13,83 +13,14 @@
 
 
 
-<!-- 
-<label>제목</label>
-${view.title}<br />
+<h1>
+${view.title}
+<span>작성자 : </span>
+${view.create_userid}
 
-<label>작성자</label>
-${view.writer}<br />
-
-<label>내용</label><br />
-${view.content}<br />
- -->
- 
-<h2>${view.title}</h2>
-
-<hr />
-<div class="create_userid">
-	<span>작성자 : </span>${view.create_userid}
-</div>
-
-<hr />
-
-<div class="content">
-	${view.content}
-</div>
-
-<hr />
- 
-<div>
+${view.content}
+</h1>
 <a href="/board/modify?seq=${view.seq}">게시물 수정</a>, <a href="/board/delete?seq=${view.seq}">게시물 삭제</a>
-</div>
-
-<!-- 댓글 시작 -->
-
-<hr />
-
-<ul>
-	<!-- <li>
-		<div>
-			<p>첫번째 댓글 작성자</p>
-			<p>첫번째 댓글</p>
-		</div>
-	</li>
-	<li>
-		<div>
-			<p>두번째 댓글 작성자</p>
-			<p>두번째 댓글</p>
-		</div>
-	</li>
-	<li>
-		<div>
-			<p>세번째 댓글 작성자</p>
-			<p>세번째 댓글</p>
-		</div>
-	</li> -->
-	
-	<c:forEach items="${reply}" var="reply">
-	<li>
-		<div>
-			<p>${reply.create_userid} / <fmt:formatDate value="${reply.regDate}" pattern="yyyy-MM-dd" /></p>
-			<p>${reply.content }</p>
-		</div>
-	</li>	
-	</c:forEach>
-</ul>
-
-<div>
-	<p>
-		<label>댓글 작성자</label> <input type="text">
-	</p>
-	<p>
-		<textarea rows="5" cols="50"></textarea>
-	</p>
-	<p>
-		<button type="button">댓글 작성</button>
-	</p>
-</div>
-
-<!-- 댓글 끝 -->
 
 </body>
 </html>

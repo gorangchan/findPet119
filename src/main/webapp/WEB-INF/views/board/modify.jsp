@@ -11,12 +11,13 @@
 
 
 <form method="post">
+<h3>${view.seq }</h3>
 
 <label>제목</label>
 <input type="text" name="title" value="${view.title}"/><br />
 
 <label>작성자</label>
-<input type="text" name="writer" value="${view.writer}"/><br />
+<input type="text" name="create_userid" value="${view.create_userid}"/><br />
 
 <label>내용</label>
 <textarea cols="50" rows="5" name="content">${view.content}</textarea><br />

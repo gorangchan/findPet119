@@ -23,19 +23,21 @@ import com.my.findpet119.common.board.service.ReplyVO;
 @RequestMapping("/board/*")
 public class BoardController {
 
-	@Autowired
-	private BoardService service;
-	
-	@Autowired
-	private ReplyService replyService;
-
 	// 게시물 목록
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public void getList(BoardVO list, Model model) throws Exception {
-		
-		
-		model.addAttribute("list", list);		 
-	}
+	  @Inject
+	   private BoardService service;
+	   
+	   @Inject
+	   private ReplyService replyService;
+
+	   // 게시물 목록
+	   @RequestMapping(value = "/list", method = RequestMethod.GET)
+	   public void getList(Model model) throws Exception {
+	      
+	      List<BoardVO> list = null; 
+	      list = service.list();
+	      model.addAttribute("list", list);       
+	   }
 	
 	// 게시물 작성
 	@RequestMapping(value = "/write", method = RequestMethod.GET)
@@ -60,30 +62,29 @@ public class BoardController {
 		model.addAttribute("view", vo);
 		 
 		
-		// 댓글 조회
-		List<ReplyVO> reply = null;
-		reply = replyService.list(seq);
-		model.addAttribute("reply", reply);
+		 
+		  List<ReplyVO> reply = null; reply = replyService.list(seq);
+		  model.addAttribute("reply", reply);
+		 
 		
 	}
 	
-	// 게시물 수정
-	@RequestMapping(value = "/modify", method = RequestMethod.GET)
-	public void getModify(@RequestParam("seq") int seq, Model model) throws Exception {
+	   @RequestMapping(value = "/modify", method = RequestMethod.GET)
+	   public void getModify(@RequestParam("seq") int seq, Model model) throws Exception {
 
-		BoardVO vo = service.view(seq);
-		 
-		model.addAttribute("view", vo);
-	}
-	
-	// 게시물 수정
-	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String postModify(BoardVO vo) throws Exception {
+	      BoardVO vo = service.view(seq);
+	       
+	      model.addAttribute("view", vo);
+	   }
+	   
+	   // 게시물 수정
+	   @RequestMapping(value = "/modify", method = RequestMethod.POST)
+	   public String postModify(BoardVO vo) throws Exception {
 
-		service.modify(vo);
-		 
-		 return "redirect:/board/view?seq=" + vo.getSeq();
-	}
+	      service.modify(vo);
+	       
+	       return "redirect:/board/view?seq=" + vo.getSeq();
+	   }
 	
 	// 게시물 삭제
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)

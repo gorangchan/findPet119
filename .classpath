@@ -13,15 +13,15 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
@@ -40,17 +40,17 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/SeonMin Lee/Desktop/Eunchans/jdbc/ojdbc8-full/ojdbc8.jar">
+	<classpathentry kind="lib" path="C:/바탕화면 폴더 모음/file/jar/ojdbc8.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/SeonMin Lee/Desktop/Eunchans/jdbc/ojdbc8-full/orai18n.jar">
+	<classpathentry kind="lib" path="C:/바탕화면 폴더 모음/file/jar/orai18n.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/SeonMin Lee/Desktop/Eunchans/sts-bundle/sts-3.9.13.RELEASE/lombok.jar">
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/sts-bundle/sts-3.9.13.RELEASE/lombok.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

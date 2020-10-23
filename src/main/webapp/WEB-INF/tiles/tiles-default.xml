@@ -14,10 +14,13 @@
 	<!-- 팝업 레이아웃  -->
     <definition name="popupLayout" template="/layouts/popupStandard.jsp">
 		<put-attribute name="content"     expression="${requestScope.body}"         />
+		
     </definition>
 
 	<definition name="/standardLayout/**" extends="standardLayout">
 		<put-attribute name="content"	value="/WEB-INF/views/{1}.jsp" />
+	
+		
 	</definition>
 
 	<definition name="/popupLayout/**" extends="popupLayout">

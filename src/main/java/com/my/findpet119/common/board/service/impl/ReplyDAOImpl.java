@@ -15,6 +15,7 @@ import com.my.findpet119.common.board.service.ReplyVO;
 @Repository
 public class ReplyDAOImpl implements ReplyDAO {
 	
+	
 	@Resource(name = "sqlSession")
 	private SqlSession sql;
 	

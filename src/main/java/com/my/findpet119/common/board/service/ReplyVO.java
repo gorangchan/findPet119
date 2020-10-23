@@ -12,14 +12,14 @@ public class ReplyVO {
     private int seq;
 
     // 작성자 
-    private String createUserid;
+    private String create_userid;
 
     // 내용 
     private String content;
 
     // 작성시간 
-    private Date createDatetime;
+    private Date create_datetime;
 
     // 수정시간 
-    private Date updateDatetime;
+    private Date update_datetime;
 }
